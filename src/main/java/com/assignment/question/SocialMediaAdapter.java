@@ -1,4 +1,4 @@
 package com.assignment.question;
 
-public class SocialMediaAdapter {
+public interface SocialMediaAdapter {
 }
