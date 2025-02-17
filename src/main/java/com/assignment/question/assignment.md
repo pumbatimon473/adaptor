@@ -1,22 +1,20 @@
-#### Q31. Adaptor Translate
+#### Q32. Adaptor Insurance
 `Unsolved`
 
-[Assignment Link](https://www.scaler.com/academy/mentee-dashboard/class/345792/assignment/problems/74073)
+[Assignment Link](https://www.scaler.com/academy/mentee-dashboard/class/345792/assignment/problems/74086)
 
-## Adapter Pattern for Language Translation Integration
+## Adapter Pattern for Insurance Providers Integration
 ### Problem Statement
-You are developing a language translation tool that needs to integrate with different translation services like Google Translate, Microsoft Translator, and Yandex.Translate. Each service offers its own API and response format, making integration complex. To simplify this process and ensure consistency in the codebase, you decide to implement the Adapter pattern. This pattern allows you to create adapter classes for different translation services, converting their APIs into a common format that your application can work with.
+Your company needs to integrate with various insurance providers, each having different APIs and data formats. To simplify the integration and ensure a consistent data format, you decide to implement the Adapter pattern. This pattern will allow you to create adapter classes for different insurance providers, converting their APIs into a common format that your application can use.
 
 ### Assignment
-Your task is to implement the Adapter pattern to create adapter classes for different translation service APIs. These adapters should adhere to the `TranslationProviderAdapter` interface, which defines common methods for translation and fetching supported languages. The goal is to abstract away the differences in APIs and data formats, providing a unified interface for your language translation tool.
+Your task is to implement the Adapter pattern to create adapter classes for different insurance providers' APIs. These adapters should conform to a common interface, making it easy to integrate new providers in the future. Your goal is to abstract away the differences in APIs and data formats and provide a unified interface for your application to work with.
 
 ### Implementing the Adapter Pattern
-1. **Review the existing translation services**: Study the APIs and response formats of the translation services you need to integrate with. Understand how each service's API works and the data it provides.
+1. **Review the existing APIs**: Study the APIs and data formats of the insurance providers you need to integrate with. Understand the differences in their APIs and how they interact with their respective systems.
 
-2. **Implement the adapter interface**: You have been provided with a `TranslationProviderAdapter` interface. Your task is to create adapter classes for each translation service that implements this interface. These adapters should adapt the specific translation service's API into a format that matches the methods defined in the `TranslationProviderAdapter`.
+2. **Implement the adapter interface**: You have been provided with an `TravelInsuranceAdapter` interface. Your task is to implement this interface in different adapter classes, each corresponding to a different insurance provider. The adapters should adapt the provider-specific APIs into a format that matches the `TravelInsuranceAdapter` interface.
 
-3. **Use composition**: Create adapter classes that internally use instances of the actual translation service APIs, such as `GoogleTranslateApi` and `MicrosoftTranslateApi`. Avoid modifying the provider APIs directly; instead, create methods in the adapter classes that map to the provider APIs and perform the necessary data transformations.
+3. **Use composition**: Create adapter classes that internally use instances of the actual insurance provider APIs. You should not modify the provider APIs directly. Instead, create methods in the adapter classes that map to the provider APIs and perform the necessary transformations.
 
-4. **Additional method**: Apart from the translate method, you should implement another method as required by the assignment.
-
-5. **Test your implementation**: Execute the provided test cases in the `TranslationProviderAdapterTest` class to validate the correctness of your adapter classes. These test cases will ensure that your adapters have the required methods and interact with the provider APIs properly.
+4. **Test your implementation**: Run the provided test cases in the `TravelInsuranceAdapterTest` class to ensure that your adapter classes work correctly. These test cases will check if your adapters have the required methods and if they interact with the provider APIs properly.
