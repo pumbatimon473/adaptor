@@ -1,20 +1,22 @@
-#### Q30. Social Adaptor
+#### Q31. Adaptor Translate
 `Unsolved`
 
-[Assignment Link](https://www.scaler.com/academy/mentee-dashboard/class/345792/assignment/problems/73641)
+[Assignment Link](https://www.scaler.com/academy/mentee-dashboard/class/345792/assignment/problems/74073)
 
-## Adapter Pattern for Social Media Aggregator
+## Adapter Pattern for Language Translation Integration
 ### Problem Statement
-You are working on a social media aggregator app that pulls in posts from various social platforms. Each platform provides data in different structures through distinct APIs. Your task is to unify the data format within the app and ensure that integrating new social platforms remains hassle-free. To achieve this, you want to implement the Adapter pattern, allowing you to create adapter classes for different social media platform APIs. These adapters will convert platform-specific APIs into a common format that your application can use.
+You are developing a language translation tool that needs to integrate with different translation services like Google Translate, Microsoft Translator, and Yandex.Translate. Each service offers its own API and response format, making integration complex. To simplify this process and ensure consistency in the codebase, you decide to implement the Adapter pattern. This pattern allows you to create adapter classes for different translation services, converting their APIs into a common format that your application can work with.
 
 ### Assignment
-Your goal is to implement the Adapter pattern to create adapter classes for different social media platform APIs. These adapters should conform to a common interface, making it easy to integrate new platforms in the future. Your task is to abstract away the differences in APIs and data formats and provide a unified interface for your application to work with.
+Your task is to implement the Adapter pattern to create adapter classes for different translation service APIs. These adapters should adhere to the `TranslationProviderAdapter` interface, which defines common methods for translation and fetching supported languages. The goal is to abstract away the differences in APIs and data formats, providing a unified interface for your language translation tool.
 
 ### Implementing the Adapter Pattern
-1. **Review the existing APIs**: Study the APIs and data formats of the social media platforms you need to integrate. Understand the differences in their APIs and how they interact with their respective systems.
+1. **Review the existing translation services**: Study the APIs and response formats of the translation services you need to integrate with. Understand how each service's API works and the data it provides.
 
-2. **Implement the adapter interface**: You have been provided with a `SocialMediaAdapter` interface. Your task is to implement this interface in different adapter classes, each corresponding to a different social media platform. The adapters should adapt the provider-specific APIs into a format that matches the `SocialMediaAdapter` interface.
+2. **Implement the adapter interface**: You have been provided with a `TranslationProviderAdapter` interface. Your task is to create adapter classes for each translation service that implements this interface. These adapters should adapt the specific translation service's API into a format that matches the methods defined in the `TranslationProviderAdapter`.
 
-3. **Use composition**: Create adapter classes that internally use instances of the actual social media platform APIs. You should not modify the platform APIs directly. Instead, create methods in the adapter classes that map to the platform APIs and perform the necessary transformations.
+3. **Use composition**: Create adapter classes that internally use instances of the actual translation service APIs, such as `GoogleTranslateApi` and `MicrosoftTranslateApi`. Avoid modifying the provider APIs directly; instead, create methods in the adapter classes that map to the provider APIs and perform the necessary data transformations.
 
-4. **Test your implementation**: Run the provided test cases in the `SocialMediaAdapterTest` class to ensure that your adapter classes work correctly. These test cases will check if your adapters have the required methods and if they interact with the platform APIs properly.
+4. **Additional method**: Apart from the translate method, you should implement another method as required by the assignment.
+
+5. **Test your implementation**: Execute the provided test cases in the `TranslationProviderAdapterTest` class to validate the correctness of your adapter classes. These test cases will ensure that your adapters have the required methods and interact with the provider APIs properly.
